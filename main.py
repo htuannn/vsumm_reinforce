@@ -72,7 +72,7 @@ def main():
         print("Currently using CPU")
 
     print("Initialize dataset {}".format(args.dataset))
-    dataset = h5py.File(args.dat aset, 'r')
+    dataset = h5py.File(args.dataset, 'r')
     num_videos = len(dataset.keys())
     splits = read_json(args.split)
     assert args.split_id < len(splits), "split_id (got {}) exceeds {}".format(args.split_id, len(splits))
